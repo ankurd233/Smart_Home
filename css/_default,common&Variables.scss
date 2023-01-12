@@ -1,0 +1,225 @@
+// Added Fonts 
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+// Variables
+
+// Color Variables
+
+// Banner BG
+$bg_1: #601180;
+$bg_2: #7e0f81;
+
+// Smart Home
+$bg_3: #791081;
+$bg_4: #8f0e81;
+
+// Security Mode
+$bg_5: #b10c83;
+$bg_6: #c50b82;
+
+$inr_1: #651197;
+$inr_2: #71249d;
+$inr_3: #a253af;
+
+//Smart_home
+$bg_7: #c40b83;
+$bg_8: #940e82;
+
+//Abt_us
+$bg_9: #7e0f81;
+$bg_10: #59117f;
+
+$color_Wht: #ffffff;
+$Montserrat: 'Montserrat';
+$Audiowide: 'Audiowide';
+
+
+
+//Common Mixin and Extends
+
+@mixin cmn_pdding ($top_btm: 9rem, $lft_rght: 0) {
+    padding: $top_btm $lft_rght;
+}
+
+@mixin cmn_margin ($top: 2rem, $rght: 1rem, $btm: 1rem, $lft: 1rem) {
+    margin: $top $rght $btm $lft;
+}
+
+@mixin flex_btwn_algn_center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin transition {
+    transition: 0.5s all;
+}
+
+%for_before_after {
+    content: "";
+    position: absolute;
+}
+
+// ---------------------------<><><><>---------------------------
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: $bg_1 $color_Wht;
+}
+
+/* scrollbar */
+/* Chrome, Edge, and Safari */
+
+*::-webkit-scrollbar {
+    width: 1.5rem;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $bg_1;
+    border-radius: 1rem;
+    border: 0.3rem solid $color_Wht;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $Montserrat;
+    font-size: 2.5rem;
+    color: $color_Wht;
+    background-image: linear-gradient(to right, $bg_3, $bg_4);
+
+}
+
+ul,
+ol,
+dl {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+button,
+input[type=submit],
+input[type=reset],
+a {
+    @include transition();
+    text-decoration: none;
+}
+
+::-moz-selection {
+    color: $bg_10;
+    background: $color_Wht;
+}
+
+::selection {
+    color: $bg_10;
+    background: $color_Wht;
+}
+
+*:focus {
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    @include transition();
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: normal;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 156rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.cmn_hdr h2 {
+    font-size: 5.5rem;
+    color: $color_Wht;
+    line-height: 1.8;
+    font-family: $Audiowide;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.cmn_hdr h4 {
+    font-size: 3.3rem;
+    color: $color_Wht;
+    line-height: 1.8;
+    font-family: $Audiowide;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.cmn_btn {
+    font-size: 2rem;
+    color: $color_Wht;
+    padding: 1.5rem 3rem;
+    display: inline-block;
+    background-color: transparent;
+    border: 0.2rem solid $color_Wht;
+    position: relative;
+    text-transform: capitalize;
+    @include transition();
+    z-index: 1;
+    border-radius: 5rem;
+    overflow: hidden;
+    font-weight: 400;
+    vertical-align: middle;
+    width: 28rem;
+    text-align: center;
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 100%;
+        background-color: $color_Wht;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        @include transition();
+    }
+
+    &:hover {
+        color: #721080;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}

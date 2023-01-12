@@ -1,0 +1,93 @@
+.abt_us {
+    @include cmn_pdding;
+    padding-bottom: 0;
+    background-image: linear-gradient(to right, #741080, #56127f);
+    position: relative;
+
+    &::after {
+        @extend %for_before_after;
+        background-image: url(../images/abt_us_aftr.png);
+        width: 29.6rem;
+        height: 57.5rem;
+        background-size: 100% 100%;
+        top: 0;
+        left: 0;
+    }
+
+    &::before {
+        @extend %for_before_after;
+        background-image: url(../images/about_us_bfr.png);
+        width: 62.4rem;
+        height: 64rem;
+        background-size: 100% 100%;
+        top: 35%;
+        right: 0;
+        mix-blend-mode: color;
+    }
+
+    .abt_us_otr {
+        @include flex_btwn_algn_center;
+
+        .abt_us_inr {
+            width: 45%;
+            position: relative;
+            z-index: 1;
+
+            .cmn_hdr {
+                p {
+                    line-height: 1.5;
+                    @include cmn_margin(5rem, 0, 0, 0);
+                }
+            }
+
+            .phn_eml {
+                @include cmn_margin(5rem, 0, 0, 0);
+
+                .phn_eml_inr {
+                    @include flex_center;
+                    justify-content: start;
+                    gap: 20px;
+                    margin-bottom: 2rem;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .chkwht_sec {
+        @include cmn_pdding(10rem, 10rem);
+        background-image: linear-gradient(to bottom, #91499fb9, #991688ce);
+        border-top: 4px solid #c49fcc;
+        border-bottom: 4px solid #c49fcc;
+        box-shadow: 0px 15px 25px rgb(0 0 0 / 20%);
+        background-image: linear-gradient(0deg, rgba(151, 14, 128, 0.5882352941) 0%, rgba(248, 236, 245, 0.342) 100%);
+        border: 0.1rem solid rgba(151, 14, 128, 0.5882352941);
+
+        h2 {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+
+        }
+
+        .chkwht_otr {
+            @include flex_btwn_algn_center;
+            position: relative;
+            z-index: 1;
+            @include cmn_margin(5rem, 0, 0, 0);
+
+            .chkwht_inr {
+                width: 32%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    filter: drop-shadow(0px 2.5rem 1.45rem rgba(0, 0, 0, 0.48));
+                }
+            }
+        }
+    }
+}

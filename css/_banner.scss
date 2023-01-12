@@ -1,0 +1,34 @@
+.bnr_sec {
+
+    @include cmn_pdding();
+
+
+    .bnr_otr {
+        @include flex_btwn_algn_center;
+
+        .bnr_inr {
+            width: 45%;
+            position: relative;
+            z-index: 2;
+
+            .bnr_cntnt {
+
+                h1 {
+                    font-size: 10rem;
+                    font-family: $Audiowide;
+                }
+            }
+
+            .bnr_btn {
+                @include cmn_margin(3rem, 0rem, 0rem, 0rem)
+            }
+
+            .img_otr {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+}

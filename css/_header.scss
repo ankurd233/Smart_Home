@@ -1,0 +1,91 @@
+header {
+    padding: 2rem 0;
+
+
+    .hamburger {
+        display: none;
+    }
+
+    .hdr_outr {
+        @include flex_btwn_algn_center;
+
+        .nav_sec {
+            @include flex_btwn_algn_center;
+            gap: 3rem;
+
+            .nav_items {
+
+                ul {
+                    @include flex_btwn_algn_center;
+                    gap: 3rem;
+
+                    li {
+                        a {
+                            color: $color_Wht;
+                            position: relative;
+
+                            &:after {
+                                @extend %for_before_after;
+                                height: 0.2rem;
+                                width: 0;
+                                background-color: $color_Wht;
+                                bottom: -5px;
+                                left: 0;
+                                @include transition;
+                            }
+
+                            &:hover:after {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .srch_btn {
+                position: relative;
+
+                input[type="search"] {
+                    padding: 1.2rem 1.5rem;
+                    background-color: transparent;
+                    border: 0.2rem solid $color_Wht;
+                    outline: none;
+                    border-radius: 5rem;
+                    width: 29rem;
+                    font-size: 2rem;
+                    color: $color_Wht;
+
+                    &::placeholder {
+                        color: $color_Wht;
+                        font-size: 2rem;
+                        letter-spacing: 0.2rem;
+                    }
+                }
+            }
+        }
+
+        .social_icons {
+            ul {
+                @include flex_btwn_algn_center;
+                gap: 2rem;
+
+                a {
+                    font-size: 1.6rem;
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    background-color: $color_Wht;
+                    border-radius: 3rem;
+                    color: $bg_2;
+                    @include flex_center;
+                    border: 2px solid $color_Wht;
+
+                    &:hover {
+                        color: $color_Wht;
+                        background-color: transparent;
+                        rotate: 360deg;
+                    }
+                }
+            }
+        }
+    }
+}

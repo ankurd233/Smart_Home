@@ -1,0 +1,35 @@
+.smart_home_two {
+    @include cmn_pdding();
+    background-image: linear-gradient(to right, #9e0e82, #c30b83);
+    position: relative;
+
+    &:after {
+        @extend %for_before_after;
+        background-image: url(../images/smart_home_two_aftr.png);
+        width: 27.5rem;
+        height: 58.2rem;
+        left: 0;
+        bottom: 0;
+        background-size: 100% 100%;
+    }
+
+    .smart_home_two_otr {
+        @include flex_btwn_algn_center;
+
+        .smart_home_two_inr {
+            width: 46%;
+            z-index: 1;
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+
+            .smrt_hm_two_btn {
+                @include cmn_margin(5rem, 0, 0, 0);
+            }
+
+        }
+    }
+
+}

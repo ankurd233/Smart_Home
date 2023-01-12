@@ -1,0 +1,82 @@
+.monitor {
+    @include cmn_pdding();
+    background-image: linear-gradient(to right, #980e82, #721080);
+    position: relative;
+
+    .mntr_otr {
+        @include flex_btwn_algn_center;
+
+        // align-items: flex-end;
+        .mntr_inr {
+            width: 48%;
+
+            .cmn_hdr {
+
+                h2 {
+                    line-height: 1.5;
+
+                    span {
+                        font-size: 3.6rem;
+                    }
+                }
+
+                p {
+                    @include cmn_margin(5rem, 0, 5rem, 0)
+                }
+
+            }
+
+            .srvc_inr.cmn_hdr {
+                text-align: center;
+            }
+
+            .srvc_btn {
+                @include flex_center;
+                gap: 3.5rem;
+
+                .cmn_btn {
+                    width: auto;
+                    border-radius: 0;
+                    border-width: 4px;
+                    @include flex_btwn_algn_center;
+                    gap: 10px;
+
+                    svg {
+                        font-size: 3.5rem;
+                    }
+                }
+            }
+
+            .img_otr {
+                margin-left: auto;
+
+                .cntnt {
+                    @include cmn_pdding;
+
+                    img {
+                        margin-inline: auto;
+                    }
+
+                    h4 {
+                        text-align: center;
+                        margin-top: 2rem;
+                        line-height: 1.5;
+                    }
+
+                    .img_inr {
+                        margin-top: 2rem;
+                    }
+
+                    .android_btn {
+                        text-align: center;
+                        margin-top: 5rem;
+
+                        .cmn_btn {
+                            width: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
