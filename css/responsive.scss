@@ -287,15 +287,7 @@
     }
 
     /* Normal Css */
-    header.sticky {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        -webkit-animation: slide-down 0.7s linear;
-        animation: slide-down 0.7s linear;
-        z-index: 99999;
-    }
+
 
     @-webkit-keyframes slide-down {
         0% {
